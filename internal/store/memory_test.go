@@ -23,7 +23,7 @@ func TestMemoryGetSubscriptionEdgeCases(t *testing.T) {
 		{name: "empty secret", secret: ""},
 		{name: "whitespace secret", secret: "   "},
 		{name: "very long secret", secret: strings.Repeat("x", 4096)},
-		{name: "issued-looking but unknown secret", secret: "soro_2f8c1d9e4b7a6c5d"},
+		{name: "issued-looking but unknown secret", secret: "soro_2f8c1d9e4b7a6c5d"}, //nolint:gosec // G101: test fixture, not a real credential
 	}
 
 	for _, tc := range cases {
